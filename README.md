@@ -1,5 +1,6 @@
 # Lucky-Numbers-Geneator
 A program that generates 8 lucky numbers sequences that the user wants (max 10)
+
 In each sequences ;
 - The first six numbers should be ordered from smallest to largest.
 - The 7th number, which is the wildcard number, must be different from the first six numbers.
