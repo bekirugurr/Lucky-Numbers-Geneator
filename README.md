@@ -1,4 +1,4 @@
-# Lucky-Numbers-Geneator
+# Lucky-Numbers-Generator
 A program that generates 8 lucky numbers sequences that the user wants (max 10)
 
 In each sequences ;
