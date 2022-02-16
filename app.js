@@ -105,9 +105,14 @@ let getTicketsFunc = () => {
 //console.log(sixNumbers);
 //deneme.innerHTML = (sixNumbers + " " +jokerNumber.toString());
 
-window.addEventListener("load", loadFunc);
-refreshButton.addEventListener("click", loadFunc);
-
+window.addEventListener("load", ()=>{
+    loadFunc();
+    input.focus();
+});
+refreshButton.addEventListener("click", ()=>{
+    loadFunc();
+    input.focus();
+});
 getButton.addEventListener("click", getTicketsFunc);
 input.addEventListener("keyup", (event) => {
   if (event.keyCode === 13) {
