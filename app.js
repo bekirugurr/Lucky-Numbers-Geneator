@@ -92,12 +92,8 @@ let getTicketsFunc = () => {
     main.style.display = "none";
     warningSection.style.display = "block";
     setTimeout(() => {
-      header.style.display = "flex";
-      main.style.display = "flex";
-      warningSection.style.display = "none";
-      document.getElementById("header__input-wrapper").style.display = "block";
-      document.getElementById("header__refresh-button").style.display = "none";
-      input.value = "";
+      ticketsContainerDiv.remove();
+      loadFunc();
       input.focus();
     }, 2000);
   }
@@ -118,9 +114,10 @@ input.addEventListener("keyup", (event) => {
     getTicketsFunc();
   }
 });
-refreshButton.addEventListener("click", ()=>{
-    let ticketsContainerDiv = document.getElementsByClassName("main__tickets-outer-container")[0];
-    ticketsContainerDiv.remove();
-    loadFunc();
-})
-
+refreshButton.addEventListener("click", () => {
+  let ticketsContainerDiv = document.getElementsByClassName(
+    "main__tickets-outer-container"
+  )[0];
+  ticketsContainerDiv.remove();
+  loadFunc();
+});
