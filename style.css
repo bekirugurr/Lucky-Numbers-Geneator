@@ -37,7 +37,6 @@ header h1 {
   font-family: "Gideon Roman", cursive;
   letter-spacing: 0.1rem;
   margin-right: 1.5rem;
-
 }
 .button {
   height: 2.5rem;
@@ -98,7 +97,7 @@ main {
   align-items: center;
 }
 
-.main__first-six-numbers { 
+.main__first-six-numbers {
   background-color: #06ff00;
   font-weight: bold;
   margin-left: 0.2rem;
@@ -170,17 +169,21 @@ main {
   }
 
   .main__first-six-numbers {
-    font-size: 1.3rem;
+    font-size: 1rem;
+    height: 1.7rem;
+    width: 1.7rem;
   }
   .main__joker-number {
-    font-size: 1.3rem;
-
+    font-size: 1rem;
+    height: 1.7rem;
+    width: 1.7rem;
   }
   .main__super-star-number {
-    font-size: 1.3rem;
-
+    font-size: 1rem;
+    height: 1.7rem;
+    width: 1.7rem;
   }
-} ;
+}
 /* 
 @media screen and (max-width: 400px) {
     body {
