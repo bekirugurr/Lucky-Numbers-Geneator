@@ -105,7 +105,7 @@ window.addEventListener("load", () => {
 });
 refreshButton.addEventListener("click", () => {
   loadFunc();
-  input.focus();
+  input.focus(); 
 });
 getButton.addEventListener("click", getTicketsFunc);
 input.addEventListener("keyup", (event) => {
