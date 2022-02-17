@@ -20,25 +20,28 @@ let loadFunc = () => {
 
 // istenen kadar seri elde etme fonksiyonu
 let getTicketsFunc = () => {
+
+  //bütün ticketlar ı kapsayan div i tanımlama 
   let ticketsContainerDiv = document.createElement("div");
   ticketsContainerDiv.className = "main__tickets-outer-container";
 
   // Tek bir seri elde etme fonksiyonu
   let getASerie = () => {
-    //Bütün sayıları kapsayacak divi tanımlama
+    //ticket divini oluşturup bütün ticketları kapsayan dive ekleme
+    let ticketDiv = document.createElement("div");
+    ticketDiv.className = "main__ticket-container";
+    ticketsContainerDiv.appendChild(ticketDiv);
+
+    //Bütün sayıları kapsayacak divi tanımlayıp ticket divine ekleme
     let numbersWrapperDiv = document.createElement("div");
     numbersWrapperDiv.className = "main__numbers-wrapper";
-    // İlk altı sayıyı elde etme, bunları kapsayı bir div oluşturup içine yazma ve bu divi sayıları kapsayan divin içine ekleme
+    ticketDiv.appendChild(numbersWrapperDiv);
+
+    // İlk altı sayıyı  elde etme, bunları ayrı ayrı divlerin içinde  sayıları kapsayan divin içine ekleme
     let sixNumbersList = [];
     while (6 > sixNumbersList.length) {
       let number = Math.round(Math.random() * 90);
-      count = 0;
-      for (let i = 0; i < sixNumbersList.length; i++) {
-        if (sixNumbersList[i] == number) {
-          count++;
-        }
-      }
-      if (count == 0) {
+      if (sixNumbersList.includes(number) == false) {
         sixNumbersList.push(number);
       }
     }
@@ -49,21 +52,15 @@ let getTicketsFunc = () => {
       sixNumbersDiv.innerHTML = sixNumbersList[i].toString().padStart(2, "0");
       numbersWrapperDiv.appendChild(sixNumbersDiv);
     }
-    
+
     //joker number ı elde etme, divini tanımlayıp içine yazma ve bu divi sayıları kapsayan divin içine ekleme
     let jokerNumber = 0;
     let getJokerNumber = () => {
       let num = Math.round(Math.random() * 90);
-      let count = 0;
-      for (let i = 0; i < sixNumbersList.length; i++) {
-        if (num == sixNumbersList[i]) {
-          count++;
-        }
-      }
-      if (count == 0) {
-        jokerNumber = num;
-      } else {
+      if (sixNumbersList.includes(num)) {
         getJokerNumber();
+      } else {
+        jokerNumber = num;
       }
     };
     getJokerNumber();
@@ -72,23 +69,14 @@ let getTicketsFunc = () => {
     jokerDiv.innerHTML = jokerNumber.toString().padStart(2, "0");
     numbersWrapperDiv.appendChild(jokerDiv);
 
-
-
     //super star number ı elde etme, divini tanımlayıp içine yazma ve bu divi sayıları kapsayan divin içine ekleme
     let superStarNumber = Math.round(Math.random() * 90);
     let superStarNumberDiv = document.createElement("div");
     superStarNumberDiv.className = "main__super-star-number";
     superStarNumberDiv.innerHTML = superStarNumber.toString().padStart(2, "0");
     numbersWrapperDiv.appendChild(superStarNumberDiv);
+  };
 
-    //ticket divini oluşturup sayıları kapsayan divini içine ekleme
-    let ticketDiv = document.createElement("div");
-    ticketDiv.className = "main__ticket-container";
-    ticketDiv.appendChild(numbersWrapperDiv);
-    ticketsContainerDiv.appendChild(ticketDiv); 
-  }; 
-
- 
   if (+input.value > 0 && +input.value < 9) {
     for (let i = 0; i < +input.value; i++) {
       getASerie();
