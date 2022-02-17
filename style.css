@@ -36,6 +36,8 @@ header h1 {
   width: 12rem;
   font-family: "Gideon Roman", cursive;
   letter-spacing: 0.1rem;
+  margin-right: 1.5rem;
+
 }
 .button {
   height: 2.5rem;
@@ -97,24 +99,46 @@ main {
 }
 
 .main__first-six-numbers {
-  color: #06ff00;
+  background-color: #06ff00;
   font-weight: bold;
+  margin-left: 0.2rem;
+  color: red;
+  padding: 0.5rem;
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .main__joker-number {
   color: rgba(23, 75, 218, 0.911);
-  margin-left: 0.4rem;
+  margin-left: 0.2rem;
   background-color: white;
   padding: 0.5rem;
   border-radius: 50%;
   font-weight: bold;
+  height: 2rem;
+  width: 2rem;
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .main__super-star-number {
   color: white;
-  margin-left: 0.4rem;
+  margin-left: 0.2rem;
   background-color: rgba(23, 75, 218, 0.911);
   padding: 0.5rem;
   border-radius: 50%;
   font-weight: bold;
+  height: 2rem;
+  width: 2rem;
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #warning-section {
