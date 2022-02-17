@@ -85,8 +85,8 @@ let getTicketsFunc = () => {
     let ticketDiv = document.createElement("div");
     ticketDiv.className = "main__ticket-container";
     ticketDiv.appendChild(numbersWrapperDiv);
-    ticketsContainerDiv.appendChild(ticketDiv);
-  };
+    ticketsContainerDiv.appendChild(ticketDiv); 
+  }; 
 
  
   if (+input.value > 0 && +input.value < 9) {
