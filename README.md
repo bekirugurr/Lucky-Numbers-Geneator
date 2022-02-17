@@ -1,5 +1,5 @@
 # Lucky-Numbers-Generator
-A program that generates 8 lucky numbers sequences that the user wants (max 10)
+A program that generates 8 tickets which consist lucky numbers sequences that the user wants (max 8)
 
 In each sequences ;
 - The first six numbers should be ordered from smallest to largest.
