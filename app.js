@@ -119,4 +119,4 @@ refreshButton.addEventListener("click", () => {
   )[0];
   ticketsContainerDiv.remove();
   loadFunc(); 
-});  
+});   
