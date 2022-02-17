@@ -118,5 +118,5 @@ refreshButton.addEventListener("click", () => {
     "main__tickets-outer-container"
   )[0];
   ticketsContainerDiv.remove();
-  loadFunc(); 
+  loadFunc();  
 });   
